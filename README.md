@@ -10,15 +10,15 @@ Serviço web de inclusão e exclusão de requisições de compra.
 
 * [x] Banco de Dados: para armazenamento dos dados em JSON foi escolhido o MongoDB.
 
-* [o] JRE local ou na nuvem.
+* [-] JRE local ou na nuvem.
 
 * [x] Framework Spring com Maven.
 
-* [o] API REST com JSON.
+* [-] API REST com JSON.
 
 ## Requisitos funcionais
 
-* [o] Formato JSON:
+* [-] Formato JSON:
 
 ```json
 [
@@ -32,16 +32,16 @@ Serviço web de inclusão e exclusão de requisições de compra.
 ]
 ```
 
-* [o] Validações
+* [-] Validações
 
-* [o] Armazenamento
+* [-] Armazenamento
 
-* [o] Retorno (OK, não OK)
+* [-] Retorno (OK, não OK)
 
-* [o] Mostrarna tela ADM todas as ordens de compra.
+* [-] Mostrarna tela ADM todas as ordens de compra.
 
-* [o] Exclusão de registro com inserção de ID do registro excluído num XML.
+* [-] Exclusão de registro com inserção de ID do registro excluído num XML.
 
-* [o] Documentar com UML ou outros diagramas.
+* [-] Documentar com UML ou outros diagramas.
 
-* [o] Ponto extra: capacidade de 5K requisições por minuto.
+* [-] Ponto extra: capacidade de 5K requisições por minuto.
