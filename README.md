@@ -8,9 +8,9 @@ Serviço web de inclusão e exclusão de requisições de compra.
 
 * [x] Servidor voltado ao Java: foi escolhido o Tomcat.
 
-* [x] Banco de Dados: para armazenamento dos dados em JSON foi escolhido o MongoDB.
+* [x] Banco de Dados: para armazenamento dos dados em JSON foi escolhido o MongoDB (considerar uso do MongoDB Atlas da Azure)
 
-* [ ] JRE local ou na nuvem.
+* [ ] JRE local ou na nuvem (considerar uso do Web Apps da Azure)
 
 * [x] Framework Spring com Maven.
 
