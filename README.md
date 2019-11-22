@@ -45,3 +45,6 @@ Serviço web de inclusão e exclusão de requisições de compra.
 * [ ] Documentar com UML ou outros diagramas.
 
 * [ ] Ponto extra: capacidade de 5K requisições por minuto.
+
+
+Ver http://www.mastertheboss.com/jboss-frameworks/spring/spring-boot-hello-world-on-wildfly
