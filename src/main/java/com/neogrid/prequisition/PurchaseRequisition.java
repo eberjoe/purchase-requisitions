@@ -1,9 +1,7 @@
 package com.neogrid.prequisition;
 
 import javax.persistence.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
 public class PurchaseRequisition {
 
 	@Id
@@ -12,6 +10,14 @@ public class PurchaseRequisition {
 	private Long quantidade;
 	private Double valor;
 	private String item;
+	
+	public PurchaseRequisition(Long id, Long numero, Long quantidade, Double valor, String item) {
+		this.id = id;
+		this.numero = numero;
+		this.quantidade = quantidade;
+		this.valor = valor;
+		this.item = item;
+	}
 	
 	public Long getId() {
 		return id;
