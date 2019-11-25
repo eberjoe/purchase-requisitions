@@ -38,7 +38,7 @@ Serviço web de inclusão e exclusão de requisições de compra.
 
 * [ ] Retorno (OK, não OK)
 
-* [ ] Mostrarna tela ADM todas as ordens de compra.
+* [ ] Mostrar na tela ADM todas as ordens de compra.
 
 * [ ] Exclusão de registro com inserção de ID do registro excluído num XML.
 
