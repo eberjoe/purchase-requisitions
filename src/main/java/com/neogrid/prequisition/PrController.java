@@ -23,30 +23,35 @@ public class PrController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public List<PurchaseRequisition> getAllPrs() {
-	  return repository.findAll();
+		return repository.findAll();
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public PurchaseRequisition getPetById(@PathVariable("id") ObjectId id) {
-	  return repository.findBy_id(id);
+//	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+//	public PurchaseRequisition getPurchaseRequisitionById(@PathVariable("id") ObjectId id) {
+//	return repository.findBy_id(id);
+//	}
+
+	@RequestMapping(value = "/{numero}", method = RequestMethod.GET)
+	public PurchaseRequisition getPurchaseRequisitionByNumero(@PathVariable("numero") Long numero) {
+		return repository.findByNumero(numero);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-	public void modifyPrById(@PathVariable("id") ObjectId id, @Valid @RequestBody PurchaseRequisition pr) {
-	  pr.set_id(id);
-	  repository.save(pr);
+	public void modifyPurchaseRequisitionById(@PathVariable("id") ObjectId id, @Valid @RequestBody PurchaseRequisition pr) {
+		pr.set_id(id);
+		repository.save(pr);
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public PurchaseRequisition createPr(@Valid @RequestBody PurchaseRequisition pr) {
-	  pr.set_id(ObjectId.get());
-	  repository.save(pr);
-	  return pr;
+	public PurchaseRequisition createPurchaseRequisition(@Valid @RequestBody PurchaseRequisition pr) {
+		pr.set_id(ObjectId.get());
+		repository.save(pr);
+		return pr;
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void deletePr(@PathVariable ObjectId id) {
-	  repository.delete(repository.findBy_id(id));
+	public void deletePurchaseRequisition(@PathVariable ObjectId id) {
+		repository.delete(repository.findBy_id(id));
 	}
 	
 }

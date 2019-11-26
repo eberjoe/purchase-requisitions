@@ -21,15 +21,13 @@ Serviço web de inclusão e exclusão de requisições de compra.
 * [ ] Formato JSON:
 
 ```json
-[
-    {
-        "id": long,
+{
+        "id": String,
         "numero": long,
         "quantidade": long,
         "valor": double,
         "item": String
-    }
-]
+}
 ```
 
 * [ ] Validações
@@ -47,6 +45,6 @@ Serviço web de inclusão e exclusão de requisições de compra.
 * [ ] Ponto extra: capacidade de 5K requisições por minuto.
 
 
-Ver http://www.mastertheboss.com/jboss-frameworks/spring/spring-boot-hello-world-on-wildfly
+http://www.mastertheboss.com/jboss-frameworks/spring/spring-boot-hello-world-on-wildfly
 
 https://www.codementor.io/gtommee97/rest-api-java-spring-boot-and-mongodb-j7nluip8d

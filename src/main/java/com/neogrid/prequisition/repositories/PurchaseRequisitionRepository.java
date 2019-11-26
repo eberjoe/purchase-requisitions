@@ -8,5 +8,7 @@ import com.neogrid.prequisition.models.PurchaseRequisition;
 public interface PurchaseRequisitionRepository extends MongoRepository<PurchaseRequisition, String> {
 	
 	PurchaseRequisition findBy_id(ObjectId _id);
+	
+	PurchaseRequisition findByNumero(Long numero);
 
 }

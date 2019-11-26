@@ -61,6 +61,7 @@
 		    <artifactId>bson</artifactId>
 		    </dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
