@@ -48,3 +48,5 @@ Serviço web de inclusão e exclusão de requisições de compra.
 
 
 Ver http://www.mastertheboss.com/jboss-frameworks/spring/spring-boot-hello-world-on-wildfly
+
+https://www.codementor.io/gtommee97/rest-api-java-spring-boot-and-mongodb-j7nluip8d

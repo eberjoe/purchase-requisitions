@@ -1,29 +1,32 @@
-package com.neogrid.prequisition;
+package com.neogrid.prequisition.models;
 
-import javax.persistence.Id;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 
 public class PurchaseRequisition {
 
 	@Id
-	private Long id;
+	private ObjectId _id;
 	private Long numero;
 	private Long quantidade;
 	private Double valor;
 	private String item;
 	
-	public PurchaseRequisition(Long id, Long numero, Long quantidade, Double valor, String item) {
-		this.id = id;
+	public PurchaseRequisition() {}
+	
+	public PurchaseRequisition(ObjectId _id, Long numero, Long quantidade, Double valor, String item) {
+		this._id = _id;
 		this.numero = numero;
 		this.quantidade = quantidade;
 		this.valor = valor;
 		this.item = item;
 	}
 	
-	public Long getId() {
-		return id;
+	public String get_id() {
+		return _id.toHexString();
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void set_id(ObjectId _id) {
+		this._id = _id;
 	}
 	public Long getNumero() {
 		return numero;
