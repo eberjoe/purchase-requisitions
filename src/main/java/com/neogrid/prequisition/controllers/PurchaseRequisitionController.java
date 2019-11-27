@@ -1,4 +1,4 @@
-package com.neogrid.prequisition;
+package com.neogrid.prequisition.controllers;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import com.neogrid.prequisition.repositories.PurchaseRequisitionRepository;
 
 @RestController
 @RequestMapping("/PurchaseRequisition")
-public class PrController {
+public class PurchaseRequisitionController {
 	@Autowired
 	private PurchaseRequisitionRepository repository;
 	
