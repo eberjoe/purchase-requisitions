@@ -2,7 +2,6 @@ package com.neogrid.prequisition.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,14 +14,14 @@ import com.neogrid.prequisition.repositories.PurchaseRequisitionRepository;
 public class AdmPageController {
 	@Autowired
 	private PurchaseRequisitionRepository repository;
+	private String[] header = {"ID", "Item", "Número", "Quantidade", "Valor"};
 	
 	@RequestMapping("/adm")
 	public String getPrs(Model model) throws Exception {
 		List<PurchaseRequisition> prs = new ArrayList<PurchaseRequisition>();
-		String msg = "Oi oi oi";
 		prs = repository.findAll();
-		model.addAllAttributes(prs);
-		model.addAttribute("mesg", msg);
+		model.addAttribute("cabecalho", header);
+		model.addAttribute("prs", prs);
 		return "adm-page";
 	}
 		
