@@ -4,47 +4,53 @@ Serviço web de inclusão e exclusão de requisições de compra.
 
 ## Requisitos técnicos
 
-* [x] Deve ser escrito em Java com JDK mais recente: foi escolhido o JDK 11.0.5 por ser a última versão com suporte a longo prazo.
+### 1. Java com JDK mais recente
+Foi escolhido o JDK 11.0.5, por ser a última versão com suporte a longo prazo.
 
-* [x] Servidor voltado ao Java: foi escolhido o Tomcat.
+### 2. Servidor voltado ao Java
+Foi escolhido o Apache Tomcat, pela sua integração amigável com o *framework* Spring.
 
-* [x] Banco de Dados: para armazenamento dos dados em JSON foi escolhido o MongoDB (considerar uso do MongoDB Atlas da Azure)
+### 3. Banco de dados
+Para o armazenamento dos dados em documentos JSON foi escolhido o NoSQL MongoDB, na nuvem Azure, no seu *tier* gratuito.
 
-* [ ] JRE local ou na nuvem (considerar uso do Web Apps da Azure)
+### 4. JRE local ou na nuvem
+Atualmente está rodando localmente, mas pode-se considerar uso do recurso Web Apps da Azure para esta aplicação.
 
-* [x] Framework Spring com Maven.
+### 5. Framework
+Foi escolhido o uso do Maven como gerenciador das dependências, associado ao *framework* Spring, por ser aquele utilizado no projeto Sourcing.
 
-* [ ] API REST com JSON.
+### 6. API REST com JSON
+A gestão do serviço é facilitada pelo *framework* Spring.
 
 ## Requisitos funcionais
 
-* [ ] Formato JSON:
+### 1. Formato JSON:
+A coleção de documentos JSON contém os dados predeterminados e segue o seguinte padrão:
 
 ```json
 {
-        "id": String,
-        "numero": long,
-        "quantidade": long,
-        "valor": double,
-        "item": String
+	"id": String,
+	"numero": long,
+	"quantidade": long,
+	"valor": double,
+	"item": String
 }
 ```
 
-* [ ] Validações
+### 2. Validações
+As validações são gerenciadas pelo padrão REST oferecido pelo Spring.
 
-* [ ] Armazenamento
+### 3. Armazenamento
+O armazenamento dos dados e as operações *CRUD* se dão através do *driver* para MongoDB oferecido pelo Spring.
 
-* [ ] Retorno (OK, não OK)
+### 4. Retorno (OK, não OK)
+O retorno para o *client* segue o padrão REST oferecido pelo Spring.
 
-* [ ] Mostrar na tela ADM todas as ordens de compra.
+### 5. Mostrar na tela ADM todas as ordens de compra.
+Foi implementada uma *view* num arquivo ```jsp``` com o uso de JSTL e *Expression Language (EL)* para a listagem dos dados.
 
-* [ ] Exclusão de registro com inserção de ID do registro excluído num XML.
+### 6. Exclusão de registro com inserção do registro excluído no sistema como arquivo XML
 
-* [ ] Documentar com UML ou outros diagramas.
+### 7. Documentar com UML ou outros diagramas
 
-* [ ] Ponto extra: capacidade de 5K requisições por minuto.
-
-
-http://www.mastertheboss.com/jboss-frameworks/spring/spring-boot-hello-world-on-wildfly
-
-https://www.codementor.io/gtommee97/rest-api-java-spring-boot-and-mongodb-j7nluip8d
+### 8 Ponto extra: capacidade de 5K requisições por minuto
