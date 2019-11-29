@@ -1,6 +1,6 @@
 # Purchase Requests
 
-Serviço web de inclusão e exclusão de requisições de compra.
+Serviço web para operações CRUD com pedidos de compra.
 
 ## Requisitos técnicos
 
@@ -17,7 +17,7 @@ Para o armazenamento dos dados em documentos JSON foi escolhido o NoSQL MongoDB,
 Atualmente está rodando localmente, mas pode-se considerar uso do recurso Web Apps da Azure para esta aplicação.
 
 ### 5. Framework
-Foi escolhido o uso do Maven como gerenciador das dependências, associado ao *framework* Spring, por ser aquele utilizado no projeto Sourcing.
+Foi escolhido o uso do Maven como gerenciador das dependências, associado ao *framework* Spring.
 
 ### 6. API REST com JSON
 A gestão do serviço é facilitada pelo *framework* Spring.
@@ -41,7 +41,7 @@ A coleção de documentos JSON contém os dados predeterminados e segue o seguin
 As validações são gerenciadas pelo padrão REST oferecido pelo Spring.
 
 ### 3. Armazenamento
-O armazenamento dos dados e as operações *CRUD* se dão através do *driver* para MongoDB oferecido pelo Spring.
+O armazenamento dos dados e as operações CRUD se dão através do *driver* para MongoDB oferecido pelo Spring.
 
 ### 4. Retorno (OK, não OK)
 O retorno para o *client* segue o padrão REST oferecido pelo Spring.
@@ -50,6 +50,7 @@ O retorno para o *client* segue o padrão REST oferecido pelo Spring.
 Foi implementada uma *view* num arquivo ```jsp``` com o uso de JSTL e *Expression Language (EL)* para a listagem dos dados.
 
 ### 6. Exclusão de registro com inserção do registro excluído no sistema como arquivo XML
+A cada exclusão da coleção de Requisições de Compra, uma inclusão é feita em outra coleção do banco de dados, e recuperada em XML.
 
 ### 7. Documentar com UML ou outros diagramas
 

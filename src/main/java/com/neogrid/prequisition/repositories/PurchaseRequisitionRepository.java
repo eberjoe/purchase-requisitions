@@ -9,6 +9,4 @@ public interface PurchaseRequisitionRepository extends MongoRepository<PurchaseR
 	
 	PurchaseRequisition findBy_id(ObjectId _id);
 	
-	PurchaseRequisition findByNumero(Long numero);
-
 }
