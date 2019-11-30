@@ -10,26 +10,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.neogrid.prequisition.models.DeletedInXml;
-import com.neogrid.prequisition.repositories.XmlRepository;
+import com.neogrid.prequisition.models.Deleted;
+import com.neogrid.prequisition.repositories.DeletedRepository;
 
 @RestController
 @RequestMapping("/Deleted")
-public class DeletedPrController {
+public class DeletedController {
 	@Autowired
-	private XmlRepository delRepo;
+	private DeletedRepository delRepo;
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public List<String> getAllDeleted() {
 		List<String> ids = new ArrayList<String>();
-		for (DeletedInXml i: delRepo.findAll()) {
+		for (Deleted i: delRepo.findAll()) {
 			ids.add(i.getId());
 		}
 		return ids;
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
-	public DeletedInXml getDeletedById(@PathVariable("id") ObjectId id) {
+	public Deleted getDeletedById(@PathVariable("id") ObjectId id) {
 		return delRepo.findById(id);
 	}
 

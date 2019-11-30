@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.neogrid.prequisition.models.DeletedInXml;
+import com.neogrid.prequisition.models.Deleted;
 import com.neogrid.prequisition.models.PurchaseRequisition;
 import com.neogrid.prequisition.repositories.PurchaseRequisitionRepository;
-import com.neogrid.prequisition.repositories.XmlRepository;
+import com.neogrid.prequisition.repositories.DeletedRepository;
 
 @RestController
 @RequestMapping("/PurchaseRequisition")
@@ -23,7 +23,7 @@ public class PurchaseRequisitionController {
 	@Autowired
 	private PurchaseRequisitionRepository repository;
 	@Autowired
-	private XmlRepository delRepo;
+	private DeletedRepository delRepo;
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public List<PurchaseRequisition> getAllPrs() {
@@ -51,8 +51,7 @@ public class PurchaseRequisitionController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deletePurchaseRequisition(@PathVariable ObjectId id) {
 		PurchaseRequisition pr = repository.findBy_id(id);
-		DeletedInXml dr = new DeletedInXml(pr.get_id(), pr.getNumero(), pr.getQuantidade(), pr.getValor(), pr.getItem());
-		delRepo.save(dr);
+		delRepo.save(new Deleted(pr.get_id(), pr.getNumero(), pr.getQuantidade(), pr.getValor(), pr.getItem()));
 		repository.delete(pr);
 	}
 	

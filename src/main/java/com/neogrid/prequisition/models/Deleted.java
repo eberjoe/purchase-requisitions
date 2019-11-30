@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @Document(collection = "deletedInXml")
 @JacksonXmlRootElement
-public class DeletedInXml {
+public class Deleted {
 	
 	@Id
 	private String id;
@@ -16,7 +16,7 @@ public class DeletedInXml {
 	private Double valor;
 	private String item;
 	
-	public DeletedInXml(String id, Long numero, Long quantidade, Double valor, String item) {
+	public Deleted(String id, Long numero, Long quantidade, Double valor, String item) {
 		super();
 		this.id = id;
 		this.numero = numero;
