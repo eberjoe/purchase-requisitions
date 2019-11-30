@@ -14,7 +14,7 @@ import com.neogrid.prequisition.models.Deleted;
 import com.neogrid.prequisition.repositories.DeletedRepository;
 
 @RestController
-@RequestMapping("/Deleted")
+@RequestMapping("/rest-deleted")
 public class DeletedController {
 	@Autowired
 	private DeletedRepository delRepo;

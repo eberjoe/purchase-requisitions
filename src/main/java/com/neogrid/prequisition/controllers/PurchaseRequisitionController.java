@@ -18,7 +18,7 @@ import com.neogrid.prequisition.repositories.PurchaseRequisitionRepository;
 import com.neogrid.prequisition.repositories.DeletedRepository;
 
 @RestController
-@RequestMapping("/PurchaseRequisition")
+@RequestMapping("/rest-pr")
 public class PurchaseRequisitionController {
 	@Autowired
 	private PurchaseRequisitionRepository repository;
