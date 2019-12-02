@@ -4,9 +4,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.AllArgsConstructor;
-import lombok.AccessLevel;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -16,14 +14,18 @@ import lombok.NoArgsConstructor;
 public class PurchaseRequisition {
 
 	@Id
-	@Getter(AccessLevel.NONE) private ObjectId _id;
+	private String _id;
 	private Long numero;
 	private Long quantidade;
 	private Double valor;
 	private String item;
-	
-	public String get_id() {
+
+	public String get_id(ObjectId _id) {
 		return _id.toHexString();
 	}
-
+	
+	public void set_id(ObjectId _id) {
+		this._id = _id.toHexString();
+	}
+	
 }

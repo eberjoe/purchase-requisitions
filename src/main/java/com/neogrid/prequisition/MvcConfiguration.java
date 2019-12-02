@@ -6,6 +6,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 public class MvcConfiguration implements WebMvcConfigurer {
+	
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -14,4 +15,5 @@ public class MvcConfiguration implements WebMvcConfigurer {
         resolver.setViewClass(JstlView.class);
         registry.viewResolver(resolver);
     }
+    
 }

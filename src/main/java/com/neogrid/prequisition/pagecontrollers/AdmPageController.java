@@ -1,10 +1,9 @@
-package com.neogrid.prequisition.controllers;
+package com.neogrid.prequisition.pagecontrollers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.neogrid.prequisition.repositories.PurchaseRequisitionRepository;
 
 @Controller
