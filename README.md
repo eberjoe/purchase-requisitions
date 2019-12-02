@@ -14,7 +14,9 @@ Foi escolhido o Apache Tomcat, pela sua integração amigável com o *framework*
 Para o armazenamento dos dados em documentos JSON foi escolhido o NoSQL MongoDB, na nuvem Azure, no seu *tier* gratuito.
 
 ### 4. JRE local ou na nuvem
-Atualmente está rodando localmente, mas pode-se considerar uso do recurso Web Apps da Azure para esta aplicação.
+A aplicação está disponível na nuvem Heroku através dos seguintes links:
+https://printegration.herokuapp.com/adm
+https://printegration.herokuapp.com/swagger-ui.html
 
 ### 5. Framework
 Foi escolhido o uso do Maven como gerenciador das dependências, associado ao *framework* Spring.
@@ -25,7 +27,7 @@ A gestão do serviço é facilitada pelo *framework* Spring.
 ## Requisitos funcionais
 
 ### 1. Formato JSON:
-A coleção de documentos JSON contém os dados predeterminados e segue o seguinte padrão:
+A coleção de documentos JSON contém os dados predeterminados com os seguintes campos:
 
 ```json
 {
@@ -53,5 +55,7 @@ Foi implementada uma *view* num arquivo ```jsp``` com o uso de JSTL e *Expressio
 A cada exclusão da coleção de Requisições de Compra, uma inclusão é feita em outra coleção do banco de dados, e recuperada em XML.
 
 ### 7. Documentar com UML ou outros diagramas
+![image](images/UML.png)
 
 ### 8 Ponto extra: capacidade de 5K requisições por minuto
+Escalabilidade a estudar.

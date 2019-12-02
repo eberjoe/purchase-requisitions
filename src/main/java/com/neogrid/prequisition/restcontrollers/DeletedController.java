@@ -31,7 +31,7 @@ public class DeletedController {
 		return ids;
 	}
 	
-	@ApiOperation(value = "Retorna RC removido em XML a partir do ID")
+	@ApiOperation(value = "Retorna RC removida no formato XML a partir do ID")
 	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
 	public Deleted getDeletedById(@RequestParam ObjectId id) {
 		return delRepo.findById(id);
