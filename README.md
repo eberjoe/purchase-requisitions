@@ -1,6 +1,6 @@
-# Purchase Requests
+# Purchase Requisitions
 
-Serviço web para operações CRUD com pedidos de compra.
+Serviço web para operações CRUD com requisições de compra.
 
 ## Requisitos técnicos
 
@@ -59,5 +59,5 @@ A cada exclusão da coleção de Requisições de Compra, uma inclusão é feita
 ### 7. Documentar com UML ou outros diagramas
 ![image](images/UML.png)
 
-### 8 Ponto extra: capacidade de 5K requisições por minuto
+### 8. Ponto extra: capacidade de 5K requisições por minuto
 Escalabilidade a estudar.
