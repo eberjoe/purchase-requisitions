@@ -2,6 +2,18 @@
 
 O objetivo deste desafio é desenvolver um serviço web para operações CRUD com uma estrutura de dados que chamaremos de **requisição de compra** ou **purchase requisition**. Os registros devem ser disponibilizados para leitura numa interface web.
 
+A **purchase requisition** deve ter a seguinte estrutura JSON:
+
+```json
+{
+	"id": String,
+	"numero": long,
+	"quantidade": long,
+	"valor": double,
+	"item": String
+}
+```
+
 ## Requisitos técnicos
 
 ### 1. Java com JDK mais recente
@@ -53,7 +65,7 @@ O retorno para o *client* segue o padrão REST oferecido pelo Spring.
 ### 5. Mostrar na tela ADM todas as ordens de compra.
 Foi implementada uma *view* num arquivo ```jsp``` com o uso de JSTL e *Expression Language (EL)* para a listagem dos dados.
 
-### 6. Exclusão de registro com inserção do registro excluído no sistema como arquivo XML
+### 6. A exclusão de um registro deve inserir o mesmo em outro local mas no formato XML
 A cada exclusão da coleção de Requisições de Compra, uma inclusão é feita em outra coleção do banco de dados, e recuperada em XML.
 
 ### 7. Documentar com UML ou outros diagramas
