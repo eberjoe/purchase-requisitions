@@ -1,6 +1,6 @@
 # Purchase Requisitions
 
-Serviço web para operações CRUD com requisições de compra.
+O objetivo deste desafio é desenvolver um serviço web para operações CRUD com uma estrutura de dados que chamaremos de **requisição de compras**. Os registros devem ser disponibilizados para leitura numa interface web.
 
 ## Requisitos técnicos
 
