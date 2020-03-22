@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'purchaserequisitions'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2ab8b01e4c554555bf11b592daf386be }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b734fee9dabc482fb21163a66bbd5bb5 }}
         package: '${{ github.workspace }}/target/*.jar'
